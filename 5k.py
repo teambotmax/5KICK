@@ -1,5 +1,6 @@
-import ARIFISTIFIK
-from ARIFISTIFIK import *
+# -*- coding: utf-8 -*- 
+import LINEPY
+from LINEPY import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
 from time import sleep
@@ -9,33 +10,45 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
-#ANTIJS_V2
-#cl = LineClient()
-cl = LineClient(authToken='MASUKAN TOKENMU DISINI')
+
+cl = LineClient()
+#cl = LineClient(authToken='MASUKAN TOKENMU DISINI')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-#ki = LineClient()
-ki = LineClient(authToken='MASUKAN TOKENMU DISINI')
+ki = LineClient()
+#ki = LineClient(authToken='MASUKAN TOKENMU DISINI')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-#kk = LineClient()
-kk = LineClient(authToken='MASUKAN TOKENMU DISINI')
+kk = LineClient()
+#kk = LineClient(authToken='MASUKAN TOKENMU DISINI')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-#kc = LineClient()
-kc = LineClient(authToken='MASUKAN TOKENMU DISINI')
+kc = LineClient()
+#kc = LineClient(authToken='MASUKAN TOKENMU DISINI')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
-#sw = LineClient()
-sw = LineClient(authToken='MASUKAN TOKENMU DISINI')
+kb = LineClient()
+#kb = LineClient(authToken='MASUKAN TOKENMU DISINI')
+kb.log("Auth Token : " + str(kb.authToken))
+channel4 = LineChannel(kb)
+kb.log("Channel Access Token : " + str(channel4.channelAccessToken))
+
+kd = LineClient()
+#kd = LineClient(authToken='MASUKAN TOKENMU DISINI')
+kd.log("Auth Token : " + str(kd.authToken))
+channel5 = LineChannel(kd)
+kd.log("Channel Access Token : " + str(channel5.channelAccessToken))
+
+sw = LineClient()
+#sw = LineClient(authToken='MASUKAN TOKENMU DISINI')
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
@@ -50,10 +63,12 @@ mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
+Dmid = kb.getProfile().mid
+Emid = kd.getProfile().mid
 Zmid = sw.getProfile().mid
-KAC = [cl,ki,kk,kc]
-ABC = [ki,kk,kc]
-Bots = [mid,Amid,Bmid,Cmid,Zmid]
+KAC = [cl,ki,kk,kc,kb,kd,sw]
+ABC = [cl,ki,kk,kc,kb,kd,sw]
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Zmid]
 Dpk = admin + staff
 
 protectqr = []
@@ -69,6 +84,8 @@ welcome = []
 responsename1 = ki.getProfile().displayName
 responsename2 = kk.getProfile().displayName
 responsename3 = kc.getProfile().displayName
+responsename4 = kb.getProfile().displayName
+responsename5 = kd.getProfile().displayName
 
 settings = {
     "Picture":False,
@@ -453,7 +470,7 @@ def bot(op):
                                 X = ki.getGroup(op.param1)
                                 X.preventedJoinByTicket = True
                                 ki.updateGroup(X)
-                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                ki.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                     except:
                         try:
                             if kk.getGroup(op.param1).preventedJoinByTicket == False:
@@ -462,7 +479,7 @@ def bot(op):
                                     X = kk.getGroup(op.param1)
                                     X.preventedJoinByTicket = True
                                     kk.updateGroup(X)
-                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                    kk.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                         except:
                             try:
                                 if kc.getGroup(op.param1).preventedJoinByTicket == False:
@@ -471,25 +488,25 @@ def bot(op):
                                         X = kc.getGroup(op.param1)
                                         X.preventedJoinByTicket = True
                                         kc.updateGroup(X)
-                                        cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                        kc.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                             except:
                                 try:
-                                    if cl.getGroup(op.param1).preventedJoinByTicket == False:
+                                    if kb.getGroup(op.param1).preventedJoinByTicket == False:
                                         if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                                            cl.reissueGroupTicket(op.param1)
-                                            X = cl.getGroup(op.param1)
+                                            kb.reissueGroupTicket(op.param1)
+                                            X = kb.getGroup(op.param1)
                                             X.preventedJoinByTicket = True
-                                            cl.updateGroup(X)
-                                            cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                            kb.updateGroup(X)
+                                            kb.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                 except:
                                     try:
-                                        if ki.getGroup(op.param1).preventedJoinByTicket == False:
+                                        if kd.getGroup(op.param1).preventedJoinByTicket == False:
                                             if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                                                ki.reissueGroupTicket(op.param1)
-                                                X = ki.getGroup(op.param1)
+                                                kd.reissueGroupTicket(op.param1)
+                                                X = kd.getGroup(op.param1)
                                                 X.preventedJoinByTicket = True
-                                                ki.updateGroup(X)
-                                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                kd.updateGroup(X)
+                                                kd.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                     except:
                                         pass
         if op.type == 13:
@@ -549,6 +566,28 @@ def bot(op):
                         kc.acceptGroupInvitation(op.param1)
                         ginfo = kc.getGroup(op.param1)
                         kc.sendMessage(op.param1,"Hai " + str(ginfo.name))
+            if Dmid in op.param3:
+                if wait["autoJoin"] == True:
+                    if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                        kb.acceptGroupInvitation(op.param1)
+                        ginfo = kb.getGroup(op.param1)
+                        kb.sendMessage(op.param1,"Selamat Tinggal\n Group " +str(ginfo.name))
+                        kb.leaveGroup(op.param1)
+                    else:
+                        kb.acceptGroupInvitation(op.param1)
+                        ginfo = kb.getGroup(op.param1)
+                        kb.sendMessage(op.param1,"Hai " + str(ginfo.name))
+            if Emid in op.param3:
+                if wait["autoJoin"] == True:
+                    if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                        kd.acceptGroupInvitation(op.param1)
+                        ginfo = kd.getGroup(op.param1)
+                        kd.sendMessage(op.param1,"Selamat Tinggal\n Group " +str(ginfo.name))
+                        kd.leaveGroup(op.param1)
+                    else:
+                        kd.acceptGroupInvitation(op.param1)
+                        ginfo = kd.getGroup(op.param1)
+                        kd.sendMessage(op.param1,"Hai " + str(ginfo.name))
 
         if op.type == 13:
             if op.param1 in protectinvite:
