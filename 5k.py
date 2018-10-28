@@ -69,7 +69,7 @@ Zmid = sw.getProfile().mid
 KAC = [cl,ki,kk,kc,kb,kd,sw]
 ABC = [cl,ki,kk,kc,kb,kd,sw]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Zmid]
-Dpk = admin + staff
+Aditmadzs = admin + staff
 
 protectqr = []
 protectkick = []
@@ -616,7 +616,19 @@ def bot(op):
                                     for _mid in gMembMids:
                                         kc.cancelGroupInvitation(op.param1,[_mid])
                                 except:
-                                    pass
+                                    try:
+                                        group = kb.getGroup(op.param1)
+                                        gMembMids = [contact.mid for contact in group.invitee]
+                                        for _mid in gMembMids:
+                                            random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
+                                    except:
+                                        try:
+                                            group = kd.getGroup(op.param1)
+                                            gMembMids = [contact.mid for contact in group.invitee]
+                                            for _mid in gMembMids:
+                                                random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
+                                        except:
+                                            pass
 
         if op.type == 17:
             if op.param2 in wait["blacklist"]:
@@ -654,7 +666,15 @@ def bot(op):
                                     if op.param3 not in wait["blacklist"]:
                                         cl.kickoutFromGroup(op.param1,[op.param2])
                                 except:
-                                    pass
+                                    try:
+                                        if op.param3 not in wait["blacklist"]:
+                                            kb.kickoutFromGroup(op.param1,[op.param2])
+                                    except:
+                                        try:
+                                            if op.param3 not in wait["blacklist"]:
+                                                kd.kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            pass
                 return
 
         if op.type == 0:
@@ -666,6 +686,7 @@ def bot(op):
                         pass
                     else:
                         cl.sendText(op.param1, wait["message"])
+                        cl.blockContact(op.param1)
 
         if op.type == 19:
             if op.param1 in protectkick:
@@ -728,7 +749,7 @@ def bot(op):
                         cl.kickoutFromGroup(op.param1,[op.param2])
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[Zmid])
-                        cl.sendMessage(op.param1,"=AntiJS Invited=")
+                        cl.sendMessage(op.param1,"เชิญ Protect JS เรียบร้อย")
                         
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                     if op.param3 in admin:
@@ -737,7 +758,7 @@ def bot(op):
                             cl.kickoutFromGroup(op.param1,[op.param2])
                             cl.findAndAddContactsByMid(op.param3)
                             cl.inviteIntoGroup(op.param1,[op.param3])
-                            cl.sendMessage(op.param1,"=Admin Invited=")
+                            cl.sendMessage(op.param1,"Admin Invited")
                 else:
                     pass
             except:
@@ -761,11 +782,11 @@ def bot(op):
                             except:
                                 try:
                                     if op.param3 not in wait["blacklist"]:
-                                        ki.kickoutFromGroup(op.param1,[op.param2])
+                                        kb.kickoutFromGroup(op.param1,[op.param2])
                                 except:
                                     try:
                                         if op.param3 not in wait["blacklist"]:
-                                            kk.kickoutFromGroup(op.param1,[op.param2])
+                                            kd.kickoutFromGroup(op.param1,[op.param2])
                                     except:
                                         try:
                                             if op.param3 not in wait["blacklist"]:
