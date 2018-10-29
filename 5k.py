@@ -55,10 +55,10 @@ sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 
 poll = LinePoll(cl)
 call = cl
-creator = ["ud296655acef67cbd5e8208e63629f78b"]
-owner = ["ud296655acef67cbd5e8208e63629f78b"]
-admin = ["ud296655acef67cbd5e8208e63629f78b"]
-staff = ["ud296655acef67cbd5e8208e63629f78b"]
+creator = ["uafd65893655c791f07c9ff31cbbc28d1"]
+owner = ["uafd65893655c791f07c9ff31cbbc28d1"]
+admin = ["uafd65893655c791f07c9ff31cbbc28d1"]
+staff = ["uafd65893655c791f07c9ff31cbbc28d1"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -1240,7 +1240,6 @@ def bot(op):
                                             kd.inviteIntoGroup(op.param1,staff)
                                         except:
                                             pass:
-                                pass
 
                 return
 
