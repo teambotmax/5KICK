@@ -382,8 +382,8 @@ def help():
                   "╠═════════════════\n" + \
                   "╠❂͜͡☬➣  🤖 PROTECT 🤖\n" + \
                   "╠═════════════════\n" + \
-                  "╠❂͜͡☬➣" + key + "Notag「on/off」\n" + \
                   "╠❂͜͡☬➣" + key + "Allpro「on/off」\n" + \
+                  "╠❂͜͡☬➣" + key + "Notag「on/off」\n" + \
                   "╠❂͜͡☬➣" + key + "Protecturl「on/off」\n" + \
                   "╠❂͜͡☬➣" + key + "Protectjoin「on/off」\n" + \
                   "╠❂͜͡☬➣" + key + "Protectkick「on/off」\n" + \
@@ -3052,9 +3052,9 @@ def bot(op):
                                          msgs = "Ghost Sudah Tidak Aktif"
                                     cl.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                    
 
-                        elif 'Allpro' in msg.text:
+                        elif 'Allpro ' in msg.text:
                            if msg._from in admin:
-                              spl = msg.text.replace('Allpro','')
+                              spl = msg.text.replace('Allpro ','')
                               if spl == 'on':
                                   if msg.to in protectqr:
                                        msgs = ""
