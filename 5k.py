@@ -327,6 +327,8 @@ def help():
                   "╠❂͜͡☬➣" + key + "Info「@」\n" + \
                   "╠❂͜͡☬➣" + key + "Nk「@」\n" + \
                   "╠❂͜͡☬➣" + key + "Mk「@」\n" + \
+                  "╠❂͜͡☬➣" + key + "Ilon  man\n" + \
+                  "╠❂͜͡☬➣" + key + "Mytoken\n" + \
                   "╠❂͜͡☬➣" + key + "Mybot\n" + \
                   "╠❂͜͡☬➣" + key + "Status\n" + \
                   "╠❂͜͡☬➣" + key + "About\n" + \
@@ -419,8 +421,8 @@ def help():
                   "╠❂͜͡☬➣" + key + "Listadmin\n" + \
                   "╠❂͜͡☬➣" + key + "Listprotect\n" + \
                   "╠══════════════════\n" + \
-                  "╠  🤖 SELFBOT-BY:MAX 🤖\n" + \
-                  "╠ line.me/ti/p/~maxbotline\n" + \
+                  "╠    🤖 SELFBOT-BY:MAX 🤖\n" + \
+                  "╠  line.me/ti/p/~maxbotline\n" + \
                   "╚══════════════════"
     return helpMessage
 
@@ -467,8 +469,8 @@ def helpbot():
                   "╠❂͜͡☬➣" + key + "Gift:「Mid korban」「Jumlah」\n" + \
                   "╠❂͜͡☬➣" + key + "Spam:「Mid korban」「Jumlah」\n" + \
                   "╠══════════════════\n" + \
-                  "╠  🤖 SELFBOT-BY:MAX 🤖\n" + \
-                  "╠ line.me/ti/p/~maxbotline\n" + \
+                  "╠    🤖 SELFBOT-BY:MAX 🤖\n" + \
+                  "╠  line.me/ti/p/~maxbotline\n" + \
                   "╚══════════════════"
     return helpMessage1
 
@@ -3139,6 +3141,37 @@ def bot(op):
                                        except:
                                            pass
 
+                        elif text.lower() == 'Ilon man':
+                            if msg._from in admin:
+                                if msg.toType == 2:
+                                    gs = cl.getGroup(msg.to)
+                                gs.preventedJoinByTicket = False
+                                cl.updateGroup(gs)
+                                invsend = 0
+                                Ticket = cl.reissueGroupTicket(msg.to)
+                                cl.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kk.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kd.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                time.sleep(0.1)
+                                targets = []
+                                for g in gs.members:
+                                    targets.append(g.mid)
+                                targets.remove(mid)
+                                if targets == []:
+                                    cl.sendText(msg.to,"MAX KICK OUT BYE")
+                                else:
+                                    for target in targets:
+                                      if target not in Bots:
+                                        try:
+                                            klist=[cl,ki,kk,kc,kb,kd]
+                                            kicker=random.choice(klist)
+                                            kicker.kickoutFromGroup(msg.to,[target])
+                                            print (msg.to,[g.mid])
+                                        except:
+                                           pass
 #===========ADMIN ADD============#
                         elif ("Adminadd " in msg.text):
                           if wait["selfbot"] == True:
