@@ -1240,7 +1240,6 @@ def bot(op):
                                             kd.inviteIntoGroup(op.param1,staff)
                                         except:
                                             pass:
-
                 return
 
         if op.type == 55:
