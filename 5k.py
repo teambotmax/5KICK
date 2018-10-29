@@ -151,7 +151,7 @@ wait = {
     "Respontag":"🤖 SELFBOT-BY:MAX 🤖",
     "welcome":"Selamat datang & semoga betah",
     "comment":"Like like & like by SELFBOT-BY:MAX",
-    "message":"Terimakasih sudah add saya 😃",
+    "message":"บัญชีนี้ได้รับการป้องกันโดย\n🇹🇭 SELFBOT-BY:MAX 🇹🇭\nทางบัญชีจึงขอทำการบล็อค\nเพื่อความปลอดภัยในบัญชี 💕",
     }
 
 read = {
@@ -326,7 +326,7 @@ def help():
                   "╠❂͜͡☬➣" + key + "Mid「@」\n" + \
                   "╠❂͜͡☬➣" + key + "Info「@」\n" + \
                   "╠❂͜͡☬➣" + key + "Nk「@」\n" + \
-                  "╠❂͜͡☬➣" + key + "Kick1「@」\n" + \
+                  "╠❂͜͡☬➣" + key + "Mk「@」\n" + \
                   "╠❂͜͡☬➣" + key + "Mybot\n" + \
                   "╠❂͜͡☬➣" + key + "Status\n" + \
                   "╠❂͜͡☬➣" + key + "About\n" + \
@@ -339,6 +339,7 @@ def help():
                   "╠❂͜͡☬➣" + key + "Tagall\n" + \
                   "╠❂͜͡☬➣" + key + "Mjoin\n" + \
                   "╠❂͜͡☬➣" + key + "Mbye\n" + \
+                  "╠❂͜͡☬➣" + key + "Assist1-5\n" + \
                   "╠❂͜͡☬➣" + key + "Byeme\n" + \
                   "╠❂͜͡☬➣" + key + "Leave「Namagrup」\n" + \
                   "╠❂͜͡☬➣" + key + "Ginfo\n" + \
@@ -1560,42 +1561,42 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "❧ĐPĶ PŘØŤĘČŤÎØŇ❧\n"
-                                if wait["sticker"] == True: md+="❧Sticker「ON」\n"
-                                else: md+="❧Sticker「OFF」\n"
-                                if wait["contact"] == True: md+="❧Contact「ON」\n"
-                                else: md+="❧Contact「OFF」\n"
-                                if wait["talkban"] == True: md+="❧Talkban「ON」\n"
-                                else: md+="❧Talkban「OFF」\n"
-                                if wait["Mentionkick"] == True: md+="❧Notag「ON」\n"
-                                else: md+="❧Notag「OFF」\n"
-                                if wait["detectMention"] == True: md+="❧Respon「ON」\n"
-                                else: md+="❧Respon「OFF」\n"
-                                if wait["autoJoin"] == True: md+="❧Autojoin「ON」\n"
-                                else: md+="❧Autojoin「OFF」\n"
-                                if wait["autoAdd"] == True: md+="❧Autoadd「ON」\n"
-                                else: md+="❧Autoadd「OFF」\n"
-                                if msg.to in welcome: md+="❧Welcome「ON」\n"
-                                else: md+="❧Welcome「OFF」\n"
-                                if wait["autoLeave"] == True: md+="❧Autoleave「ON」\n"
-                                else: md+="❧Autoleave「OFF」\n"
-                                if msg.to in protectqr: md+="❧Protecturl「ON」\n"
-                                else: md+="❧Protecturl「OFF」\n"
-                                if msg.to in protectjoin: md+="❧Protectjoin「ON」\n"
-                                else: md+="❧Protectjoin「OFF」\n"
-                                if msg.to in protectkick: md+="❧Protectkick「ON」\n"
-                                else: md+="❧Protectkick「OFF」\n"
-                                if msg.to in protectcancel: md+="❧Protectcancel「ON」\n"
-                                else: md+="❧Protectcancel「OFF」\n"
-                                if msg.to in protectantijs: md+="❧Antijs「ON」\n"
-                                else: md+="❧Antijs「OFF」\n"  
-                                if msg.to in ghost: md+="❧Ghost「ON」\n"
-                                else: md+="❧Ghost「OFF」\n"                                   
-                                cl.sendMessage(msg.to, md+"\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                md = "┏━━━━━━━━━━━\n┃     🤖 S T A T U S 🤖\n┗━━━━━━━━━━━\n"
+                                if wait["sticker"] == True: md+="┃🤖┃ ✅ Sticker「ON」\n"
+                                else: md+="┃🤖┃ ❌ Sticker「OFF」\n"
+                                if wait["contact"] == True: md+="┃🤖┃ ✅ Contact「ON」\n"
+                                else: md+="┃🤖┃ ❌ Contact「OFF」\n"
+                                if wait["talkban"] == True: md+="┃🤖┃ ✅ Talkban「ON」\n"
+                                else: md+="┃🤖┃ ❌ Talkban「OFF」\n"
+                                if wait["Mentionkick"] == True: md+="┃🤖┃ ✅ Notag「ON」\n"
+                                else: md+="┃🤖┃ ❌ Notag「OFF」\n"
+                                if wait["detectMention"] == True: md+="┃🤖┃ ✅ Respon「ON」\n"
+                                else: md+="┃🤖┃ ❌ Respon「OFF」\n"
+                                if wait["autoJoin"] == True: md+="┃🤖┃ ✅ Autojoin「ON」\n"
+                                else: md+="┃🤖┃ ❌ Autojoin「OFF」\n"
+                                if wait["autoAdd"] == True: md+="┃🤖┃ ✅ Autoadd「ON」\n"
+                                else: md+="┃🤖┃ ❌ Autoadd「OFF」\n"
+                                if msg.to in welcome: md+="┃🤖┃ ✅ Welcome「ON」\n"
+                                else: md+="┃🤖┃ ❌ Welcome「OFF」\n"
+                                if wait["autoLeave"] == True: md+="┃🤖┃ ✅ Autoleave「ON」\n"
+                                else: md+="┃🤖┃ ❌ Autoleave「OFF」\n"
+                                if msg.to in protectqr: md+="┃🤖┃ ✅ Protecturl「ON」\n"
+                                else: md+="┃🤖┃ ❌ Protecturl「OFF」\n"
+                                if msg.to in protectjoin: md+="┃🤖┃ ✅ Protectjoin「ON」\n"
+                                else: md+="┃🤖┃ ❌ Protectjoin「OFF」\n"
+                                if msg.to in protectkick: md+="┃🤖┃ ✅ Protectkick「ON」\n"
+                                else: md+="┃🤖┃ ❌ Protectkick「OFF」\n"
+                                if msg.to in protectcancel: md+="┃🤖┃ ✅ Protectcancel「ON」\n"
+                                else: md+="┃🤖┃ ❌ Protectcancel「OFF」\n"
+                                if msg.to in protectantijs: md+="┃🤖┃ ✅ Blockjs「ON」\n"
+                                else: md+="┃🤖┃ ❌ Blockjs「OFF」\n"  
+                                if msg.to in ghost: md+="┃🤖┃ ✅ Ghost「ON」\n"
+                                else: md+="┃🤖┃ ❌ Ghost「OFF」\n"                                   
+                                cl.sendMessage(msg.to, md+"┏━━━━━━━━━━━\n┃🤖┃ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃🤖┃ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n┗━━━━━━━━━━━")
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"Creator Bot ARIFISTIFIK") 
+                                cl.sendText(msg.to,"Creator Bot\nBY: SELFBOT-BY:MAX") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
@@ -1604,7 +1605,7 @@ def bot(op):
                         elif cmd == "about" or cmd == "informasi":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "「 Type Selfbot 」\n")
+                               sendMention(msg.to, sender, "「 SELFBOT-BY:MAX 」\n")
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'me':
@@ -1632,7 +1633,7 @@ def bot(op):
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = cl.getContact(key1)
-                               cl.sendMessage(msg.to, "❧Nama : "+str(mi.displayName)+"\n❧Mid : " +key1+"\n❧Status Msg"+str(mi.statusMessage))
+                               cl.sendMessage(msg.to, "🤖 Nama : "+str(mi.displayName)+"\n🤖Mid : " +key1+"\n🤖Status Msg"+str(mi.statusMessage))
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
                                if "videoProfile='{" in str(cl.getContact(key1)):
                                    cl.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
@@ -1692,7 +1693,7 @@ def bot(op):
                                pesan = text.replace(sep[0] + " ","")
                                saya = cl.getGroupIdsJoined()
                                for group in saya:
-                                   cl.sendMessage(group,"[ Broadcast ]\n" + str(pesan))
+                                   cl.sendMessage(group,"[ SELFBOT-BY:MAX ]\n" + str(pesan))
 
                         elif text.lower() == "mykey":
                           if wait["selfbot"] == True:
@@ -1778,15 +1779,15 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                ret_ += "🤖BOT Fams Grup Info\n"
-                                ret_ += "\n🤖Nama Group : {}".format(G.name)
-                                ret_ += "\n🤖ID Group : {}".format(G.id)
-                                ret_ += "\n🤖Pembuat : {}".format(gCreator)
-                                ret_ += "\n🤖Waktu Dibuat : {}".format(str(timeCreated))
-                                ret_ += "\n🤖Jumlah Member : {}".format(str(len(G.members)))
-                                ret_ += "\n🤖Jumlah Pending : {}".format(gPending)
-                                ret_ += "\n🤖Group Qr : {}".format(gQr)
-                                ret_ += "\n🤖Group Ticket : {}".format(gTicket)
+                                ret_ += "🤖 BOT Fams Grup Info\n"
+                                ret_ += "\n🤖 Nama Group : {}".format(G.name)
+                                ret_ += "\n🤖 ID Group : {}".format(G.id)
+                                ret_ += "\n🤖 Pembuat : {}".format(gCreator)
+                                ret_ += "\n🤖 Waktu Dibuat : {}".format(str(timeCreated))
+                                ret_ += "\n🤖 Jumlah Member : {}".format(str(len(G.members)))
+                                ret_ += "\n🤖 Jumlah Pending : {}".format(gPending)
+                                ret_ += "\n🤖 Group Qr : {}".format(gQr)
+                                ret_ += "\n🤖 Group Ticket : {}".format(gTicket)
                                 ret_ += ""
                                 cl.sendMessage(to, str(ret_))
                             except:
@@ -1805,8 +1806,8 @@ def bot(op):
                                 ret_ = ""
                                 for mem in G.members:
                                     no += 1
-                                    ret_ += "\n " "🤖"+ str(no) + ". " + mem.displayName
-                                cl.sendMessage(to,"🤖Group Name : [ " + str(G.name) + " ]\n\n   [ List Member ]\n" + ret_ + "\n\n「Total %i Members」" % len(G.members))
+                                    ret_ += "\n " "🤖 "+ str(no) + ". " + mem.displayName
+                                cl.sendMessage(to,"🤖 Group Name : [ " + str(G.name) + " ]\n\n   [ List Member ]\n" + ret_ + "\n\n「Total %i Members」" % len(G.members))
                             except: 
                                 pass
 
@@ -3113,7 +3114,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("Kick1 " in msg.text):
+                        elif ("Mk " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
