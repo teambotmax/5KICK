@@ -355,9 +355,9 @@ def help():
                   "╠❂͜͡☬➣" + key + "Lurking「on/off」\n" + \
                   "╠❂͜͡☬➣" + key + "Lurkers\n" + \
                   "╠❂͜͡☬➣" + key + "Sider「on/off」\n" + \
-                  "╠❂͜͡☬➣" + key + "Updatefoto\n" + \
+                  "╠❂͜͡☬➣" + key + "Uppro\n" + \
                   "╠❂͜͡☬➣" + key + "Updategrup\n" + \
-                  "╠❂͜͡☬➣" + key + "Updatebot\n" + \
+                  "╠❂͜͡☬➣" + key + "Upbot\n" + \
                   "╠❂͜͡☬➣" + key + "Broadcast:「Text」\n" + \
                   "╠❂͜͡☬➣" + key + "Setkey「New Key」\n" + \
                   "╠❂͜͡☬➣" + key + "Mykey\n" + \
@@ -1949,13 +1949,13 @@ def bot(op):
                                 settings["groupPicture"] = True
                                 cl.sendText(msg.to,"Kirim fotonya.....")
 
-                        elif cmd == "updatebot":
+                        elif cmd == "upbot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
                                 cl.sendText(msg.to,"Kirim fotonya.....")
                                 
-                        elif cmd == "updatefoto":
+                        elif cmd == "uppro":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][mid] = True
