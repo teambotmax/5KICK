@@ -1239,7 +1239,7 @@ def bot(op):
                                             kd.findAndAddContactsByMid(op.param1,admin)
                                             kd.inviteIntoGroup(op.param1,staff)
                                         except:
-                                            pass:
+                                            pass
                 return
 
         if op.type == 55:
