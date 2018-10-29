@@ -1313,7 +1313,7 @@ def bot(op):
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    cl.sendMessage(msg.to,"「Cek ID Sticker」\n❧STKID : " + msg.contentMetadata["STKID"] + "\n❧STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n❧STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    cl.sendMessage(msg.to,"「Cek ID Sticker」\n🤖STKID : " + msg.contentMetadata["STKID"] + "\n🤖STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n🤖STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
@@ -1322,7 +1322,7 @@ def bot(op):
                         contact = cl.getContact(msg.contentMetadata["mid"])
                         path = cl.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        cl.sendMessage(msg.to,"❧Nama : " + msg.contentMetadata["displayName"] + "\n❧MID : " + msg.contentMetadata["mid"] + "\n❧Status Msg : " + contact.statusMessage + "\n❧Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        cl.sendMessage(msg.to,"🤖Nama : " + msg.contentMetadata["displayName"] + "\n🤖MID : " + msg.contentMetadata["mid"] + "\n❧Status Msg : " + contact.statusMessage + "\n❧Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
                         cl.sendImageWithURL(msg.to, image)
 
         if op.type == 25 or op.type == 26:
@@ -1348,7 +1348,7 @@ def bot(op):
                         contact = cl.getContact(msg.contentMetadata["mid"])
                         path = cl.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        cl.sendMessage(msg.to,"❧Nama : " + msg.contentMetadata["displayName"] + "\n❧MID : " + msg.contentMetadata["mid"] + "\n❧Status Msg : " + contact.statusMessage + "\n❧Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        cl.sendMessage(msg.to,"🤖Nama : " + msg.contentMetadata["displayName"] + "\n🤖MID : " + msg.contentMetadata["mid"] + "\n🤖Status Msg : " + contact.statusMessage + "\n🤖Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
                         cl.sendImageWithURL(msg.to, image)
 #ADD Bots
                if msg.contentType == 13:
@@ -1463,27 +1463,27 @@ def bot(op):
 
                if msg.contentType == 1:
                    if msg._from in admin:
-                       if mid in Setmain["ARfoto"]:
+                       if mid in Setmain["ADITMADZSfoto"]:
                             path = cl.downloadObjectMsg(msg_id)
-                            del Setmain["ARfoto"][mid]
+                            del Setmain["ADITMADZSfoto"][mid]
                             cl.updateProfilePicture(path)
                             cl.sendMessage(msg.to,"Foto berhasil dirubah")
 
                if msg.contentType == 1:
                  if msg._from in admin:
-                        if Amid in Setmain["ARfoto"]:
+                        if Amid in Setmain["ADITMADZSfoto"]:
                             path = ki.downloadObjectMsg(msg_id)
-                            del Setmain["ARfoto"][Amid]
+                            del Setmain["ADITMADZSfoto"][Amid]
                             ki.updateProfilePicture(path)
                             ki.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Bmid in Setmain["ARfoto"]:
+                        elif Bmid in Setmain["ADITMADZSfoto"]:
                             path = kk.downloadObjectMsg(msg_id)
-                            del Setmain["ARfoto"][Bmid]
+                            del Setmain["ADITMADZSfoto"][Bmid]
                             kk.updateProfilePicture(path)
                             kk.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Cmid in Setmain["ARfoto"]:
+                        elif Cmid in Setmain["ADITMADZSfoto"]:
                             path = kc.downloadObjectMsg(msg_id)
-                            del Setmain["ARfoto"][Cmid]
+                            del Setmain["ADITMADZSfoto"][Cmid]
                             kc.updateProfilePicture(path)
                             kc.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Dmid in Setmain["ADITMADZSfoto"]:
@@ -1496,9 +1496,9 @@ def bot(op):
                             del Setmain["ADITMADZSfoto"][Emid]
                             kd.updateProfilePicture(path)
                             kd.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Zmid in Setmain["ARfoto"]:
+                        elif Zmid in Setmain["ADITMADZSfoto"]:
                             path = sw.downloadObjectMsg(msg_id)
-                            del Setmain["ARfoto"][Zmid]
+                            del Setmain["ADITMADZSfoto"][Zmid]
                             sw.updateProfilePicture(path)
                             sw.sendMessage(msg.to,"Foto berhasil dirubah")
 
@@ -1958,37 +1958,37 @@ def bot(op):
                         elif cmd == "updatefoto":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                Setmain["ARfoto"][mid] = True
+                                Setmain["ADITMADZSfoto"][mid] = True
                                 cl.sendText(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "bot1up":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Amid] = True
+                                Setmain["ADITMADZSfoto"][Amid] = True
                                 ki.sendText(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "bot2up":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Bmid] = True
+                                Setmain["ADITMADZSfoto"][Bmid] = True
                                 kk.sendText(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "bot3up":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Cmid] = True
+                                Setmain["ADITMADZSfoto"][Cmid] = True
                                 kc.sendText(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "bot4up":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Dmid] = True
+                                Setmain["ADITMADZSfoto"][Dmid] = True
                                 kb.sendText(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "bot5up":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Emid] = True
+                                Setmain["ADITMADZSfoto"][Emid] = True
                                 kd.sendText(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "bot6up":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Zmid] = True
+                                Setmain["ADITMADZSfoto"][Zmid] = True
                                 sw.sendText(msg.to,"Kirim fotonya.....")
                        
                         elif cmd.startswith("myname: "):
