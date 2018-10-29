@@ -2901,6 +2901,16 @@ def bot(op):
                                   cl.sendMessage(msg.to, "http://line.me/ti/p/~" + msgs)
                                   cl.sendMessage(msg.to, None, contentMetadata={'mid': conn.mid}, contentType=13)
 
+                        elif 'Mytoken' in msg.text:
+                          if wait["selfbot"] == True:
+                           if msg._from in admin:
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX\n"+cl.authToken)
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX 1\n"+ki.authToken)
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX 2\n"+kk.authToken)
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX 3\n"+kc.authToken)
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX 4\n"+kb.authToken)
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX 5\n"+kd.authToken)
+                               cl.sendMessage(msg.to,"SELFBOT-BY:MAX 6\n"+sw.authToken)
 #===========Protection============#
                         elif 'Welcome ' in msg.text:
                            if msg._from in admin:
