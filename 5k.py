@@ -417,6 +417,9 @@ def help():
                   "╠❂͜͡☬➣" + key + "Listbot\n" + \
                   "╠❂͜͡☬➣" + key + "Listadmin\n" + \
                   "╠❂͜͡☬➣" + key + "Listprotect\n" + \
+                  "╠══════════════════\n" + \
+                  "╠  🤖 SELFBOT-BY:MAX 🤖\n" + \
+                  "╠ line.me/ti/p/~maxbotline\n" + \
                   "╚══════════════════"
     return helpMessage
 
@@ -462,6 +465,9 @@ def helpbot():
                   "╠❂͜͡☬➣" + key + "Bot5up「Kirim fotonya」\n" + \
                   "╠❂͜͡☬➣" + key + "Gift:「Mid korban」「Jumlah」\n" + \
                   "╠❂͜͡☬➣" + key + "Spam:「Mid korban」「Jumlah」\n" + \
+                  "╠══════════════════\n" + \
+                  "╠  🤖 SELFBOT-BY:MAX 🤖\n" + \
+                  "╠ line.me/ti/p/~maxbotline\n" + \
                   "╚══════════════════"
     return helpMessage1
 
